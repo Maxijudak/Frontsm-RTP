@@ -1,0 +1,20 @@
+h1 { color: #E9967A;
+    font-size: 50px;
+    text-align: center;
+    text-decoration: underline;
+    font-family: 'Orbitron';
+}
+.enlaces {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+.descripcion { color: #FFA07A; font-size: 20px;}
+.ingredientes { color: #FFA07A; font-size: 20px;}
+.preparacion { color: #FFA07A; font-size: 20px;}
+.origen { color: #FFA07A; font-size: 20px;}
+body { background-color: #CD5C5C; } 
+    body { font-family: Arial, sans-serif; text-align: justify; }
+    .imagen { width: 300px; height: 200px; }

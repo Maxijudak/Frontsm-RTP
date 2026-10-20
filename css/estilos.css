@@ -1,20 +1,157 @@
-h1 { color: #E9967A;
+
+h1 {
+    color: #593923;
     font-size: 50px;
     text-align: center;
     text-decoration: underline;
-    font-family: 'Orbitron';
+    font-family: 'Orbitron', Times, sans-serif;
 }
-.enlaces {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+
+/* Textos */
+.descripcion {
+    color: #6F5844;
+    font-size: 20px;
+}
+
+.ingredientes {
+    color:#795D43;
+    font-size: 20px;
+}
+
+.preparacion {
+    color: #795D43;
+    font-size: 20px;
+}
+
+.origen {
+    color: #65452F;
+    font-size: 20px;
+     text-decoration: underline;
+}
+
+/* Distribución general */
+* {
     box-sizing: border-box;
-    padding: 10px;
 }
-.descripcion { color: #FFA07A; font-size: 20px;}
-.ingredientes { color: #FFA07A; font-size: 20px;}
-.preparacion { color: #FFA07A; font-size: 20px;}
-.origen { color: #FFA07A; font-size: 20px;}
-body { background-color: #CD5C5C; } 
-    body { font-family: Arial, sans-serif; text-align: justify; }
-    .imagen { width: 300px; height: 200px; }
+
+body {
+    display: grid;
+    grid-template-columns: 3fr 1.15fr;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+        "header header"
+        "nav nav"
+        "section aside"
+        "footer footer";
+
+    gap: 6px;
+    min-height: 100vh;
+    padding: 6px;
+    margin: 0;
+    border: 3px solid black;
+
+    background-color:#E8DCC8;
+    font-family:Times, sans-serif;
+    text-align: justify;
+}
+
+/* Encabezado */
+header {
+    grid-area: header;
+    background-color:#C4A484;
+    padding: 30px;
+    text-align: center;
+}
+
+/* Navegación */
+nav {
+    grid-area: nav;
+    background-color:#F3E9D8;
+    padding: 12px;
+    text-align: center;
+}
+
+nav div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+nav a {
+    color: #795438;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Contenido principal */
+section {
+    grid-area: section;
+    background-color:#FAF5EB;
+    padding: 25px;
+    min-width: 0;
+}
+
+/* Barra lateral */
+aside {
+    grid-area: aside;
+    background-color:#D6BFA5;
+    padding: 20px;
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+/* Imágenes */
+.imagen {
+    width: 300px;
+    height: 200px;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Audio y videos */
+iframe {
+    max-width: 100%;
+}
+
+/* Pie de página */
+footer {
+    grid-area: footer;
+    background-color: #B99A78;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Espaciado */
+h1, h2, p, ul, ol {
+    margin-bottom: 15px;
+}
+
+/* Adaptación a celulares */
+@media (max-width: 650px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas:
+            "header"
+            "nav"
+            "section"
+            "aside"
+            "footer";
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    nav div {
+        flex-direction: column;
+        gap: 12px;
+    }
+}

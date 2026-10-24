@@ -28,8 +28,29 @@ h1 {
     font-size: 20px;
      text-decoration: underline;
 }
+.descripcion {
+    color: #65452F;
+    font-size: 20px;
+}
+.contacto {
+    color: #593923;
+    font-size: 20px;
+     text-decoration: underline;
+  
+}
 
-/* Distribución general */
+.logo {  width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;}
+
+.redes {  width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;}
+
+
+
 * {
     box-sizing: border-box;
 }
@@ -154,4 +175,18 @@ h1, h2, p, ul, ol {
         flex-direction: column;
         gap: 12px;
     }
+}
+header { 
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center; 
+    flex-wrap: wrap;
+     
+}
+footer { 
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center; 
+    flex-wrap: wrap;
+     
 }
